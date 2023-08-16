@@ -71,3 +71,13 @@ header h2 {
 footer {
   margin-top: 50px;
 }
+
+address {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+address div {
+  margin-top: 25px;
+  background-color: lightcyan;
+  font-size: 1.5em;
+}
