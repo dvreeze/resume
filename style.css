@@ -4,21 +4,51 @@
   gap: 2rem;
 }
 
-.container > .title {
+.container > header > .title {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1em;
   background-color: lemonchiffon;
 }
-.container > .title > * {
+.container > header > .title > * {
   margin-top: 0;
   margin-bottom: 0;
 }
-.container > .title > h2 {
+.container > header > .title > h2 {
   font-style: italic;
 }
-.container > .wrapper {
+
+div.header-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+div.header-content > * {
+  min-width: 200px;
+  max-width: 500px;
+  flex: 1 1 auto;
+}
+div.header-content > .header-section {
+  display: flex;
+  flex-direction: column;
+}
+div.header-content > .header-section > * {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+div.header-content > .header-section > h2 {
+  background-color: cyan;
+}
+div.header-content > .header-section.contact-info {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > .main-wrapper {
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -27,45 +57,50 @@
   align-self: center;
 }
 
-.wrapper > aside {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.wrapper > main {
+.main-wrapper > main {
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
-.wrapper > main > .main-section {
+.main-wrapper > main > .main-section {
   display: flex;
   flex-direction: column;
 }
-.wrapper > main > .main-section > * {
+.main-wrapper > main > .main-section > * {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.wrapper > main > .main-section > h2 {
+.main-wrapper > main > .main-section > h2 {
   background-color: cyan;
 }
 
-.main-section.activities {
+div.activities {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 1em;
 }
+div.activities > * {
+  min-width: 200px;
+  max-width: 500px;
+  flex: 1 1 auto;
+}
+div.activities > .activity-with-table {
+  min-width: 500px;
+  max-width: 1000px;
+}
 
-.main-section.activities > .activity > hgroup {
+div.activities > .activity > hgroup {
   display: flex;
   flex-direction: column;
   background-color: lightcyan;
 }
-.main-section.activities > .activity > hgroup > * {
+div.activities > .activity > hgroup > * {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
 }
-.main-section.activities > .activity > hgroup > p {
+div.activities > .activity > hgroup > p {
   padding-left: 30px;
 }
 
@@ -128,7 +163,7 @@ address.contact {
   justify-content: space-around;
   height: 40vh;
 }
-address.contact > div {
+address.contact > * {
   margin-left: 10%;
   margin-right: 10%;
   background-color: lightcyan;
